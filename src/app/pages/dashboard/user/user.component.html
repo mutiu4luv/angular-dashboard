@@ -1,0 +1,95 @@
+<div>
+  <div class="cards">
+    <div class="card-single">
+      <div>
+        <h1>40</h1>
+        <span>All Users</span>
+      </div>
+      <div>
+        <span class="las"></span>
+      </div>
+    </div>
+    <div class="card-single">
+      <div>
+        <h1>40</h1>
+        <span> Active</span>
+      </div>
+      <div>
+        <span class="las"></span>
+      </div>
+    </div>
+    <div class="card-single">
+      <div>
+        <h1>40</h1>
+        <span>Inactive Users</span>
+      </div>
+      <div>
+        <span class="las"></span>
+      </div>
+    </div>
+  </div>
+  <div class="recent-grid">
+    <div class="project">
+      <div class="card">
+        <div class="card-header">
+          <!-- <h2>Recent Projects</h2> -->
+          <!-- <button>see all</button> -->
+        </div>
+
+        <div class="card-body">
+          <div class="table-responsive">
+            <table>
+              <thead>
+                <tr>
+                  <td>ClientId</td>
+                  <td>Full Name</td>
+                  <td>Email</td>
+                  <td>Phone No</td>
+                  <td>BVN</td>
+                  <td>Active</td>
+                </tr>
+              </thead>
+              <app-loader
+                *ngIf="loaded"
+                style="display: flex; justify-content: center"
+              ></app-loader>
+              <tbody>
+                <tr
+                  *ngFor="
+                    let user of allUsers
+                      | paginate
+                        : {
+                            itemsPerPage: itemsPerPage,
+                            currentPage: currentPage
+                          };
+                    let i = index
+                  "
+                >
+                  <td>{{ user._id }}</td>
+                  <td>{{ user.name }}</td>
+                  <td>{{ user.email }}</td>
+                  <td>{{ user.createdAt }}</td>
+                  <td>{{ user.updatedAt }}</td>
+                  <!-- <td>272727272771</td> -->
+                  <td><span class="status green"></span> true</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="pagination-div">
+              <pagination-controls
+                class="controls"
+                previousLabel="Prev"
+                nextLabel="Next"
+                (pageChange)="onPageChange($event)"
+              >
+              </pagination-controls>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="customers"></div>
+  </div>
+</div>

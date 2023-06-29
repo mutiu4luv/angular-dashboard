@@ -1,0 +1,59 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px;
+  background-color: transparent;
+  height: 60px;
+}
+.nav .nav-royal {
+  font-size: 30px;
+  font-weight: 700;
+  color: rgb(61, 24, 97);
+}
+img {
+  height: 40px;
+}
+.hero {
+  margin: 30px;
+  margin-top: 80px;
+  width: 40%;
+}
+.hero-one {
+  font-size: 20px;
+  font-weight: 600;
+}
+.hero-two {
+  font-size: 40px;
+  font-weight: 700;
+}
+.hero-three {
+  font-size: 40px;
+  font-weight: 700;
+  color: yellowgreen;
+}
+.hero-four {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 30px;
+  padding-bottom: 50px;
+}
+.btn {
+  margin-top: 20px;
+}
+/* Styles for phones in portrait orientation */
+@media only screen and (max-width: 480px) and (orientation: portrait) {
+  /* Add your CSS styles for phones in portrait orientation here */
+  /* Example styles */
+  .hero {
+    text-align: center;
+  }
+}
+
+/* Styles for phones in landscape orientation */
+@media only screen and (max-width: 767px) and (orientation: landscape) {
+  /* Add your CSS styles for phones in landscape orientation here */
+  /* Example styles */
+  .hero {
+    text-align: center;
+  }
+}

@@ -1,0 +1,77 @@
+<div>
+  <!-- <app-loader *ngIf="loading"></app-loader> -->
+
+  <div class="cards">
+    <div class="card-single">
+      <div>
+        <h1>40</h1>
+        <span>All Users</span>
+      </div>
+      <div>
+        <span class="las"></span>
+      </div>
+    </div>
+    <div class="card-single">
+      <div>
+        <h1>40</h1>
+        <span> Active</span>
+      </div>
+      <div>
+        <span class="las"></span>
+      </div>
+    </div>
+    <div class="card-single">
+      <div>
+        <h1>40</h1>
+        <span>Inactive Users</span>
+      </div>
+      <div>
+        <span class="las"></span>
+      </div>
+    </div>
+  </div>
+  <div class="recent-grid">
+    <div class="project">
+      <div class="card">
+        <div class="card-header">
+          <!-- <h2>Recent Projects</h2> -->
+          <!-- <button>see all</button> -->
+        </div>
+
+        <div class="card-body">
+          <div class="table-responsive">
+            <table>
+              <thead>
+                <tr>
+                  <td>ClientId</td>
+                  <td>Full Name</td>
+                  <!-- <td>Email</td> -->
+                  <td>Phone No</td>
+                  <!-- <td>BVN</td> -->
+                  <td>Active</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let transaction of allTransactions">
+                  <td>{{ transaction._id }}</td>
+                  <td>{{ transaction.room }}</td>
+                  <!-- <td>{{ transaction. }}</td> -->
+                  <td>{{ transaction.totaldays }}</td>
+                  <!-- <td>{{ transaction.isCancelled }}</td> -->
+                  <!-- <td>272727272771</td> -->
+                  <td>
+                    <span class="status green"></span>
+                    {{ transaction.isCancelled }}
+                  </td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="customers"></div>
+  </div>
+</div>

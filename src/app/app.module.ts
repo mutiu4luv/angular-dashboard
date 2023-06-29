@@ -1,18 +1,26 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+// import {  } from 'simple-ng-loader';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+// import { LoaderComponent } from './loader/loader.component';
+import { NgxSpinnerModule } from 'ngx-spinner';
+import { SharedmoduleModule } from 'src/sharedmodule/sharedmodule.module';
+// import { UserComponent } from './pages/dashboard/user/user.component';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent, DashboardComponent],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    // BrowserAnimationsModule,
+    NgxSpinnerModule,
+    SharedmoduleModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

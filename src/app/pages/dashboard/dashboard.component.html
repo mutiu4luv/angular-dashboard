@@ -1,0 +1,52 @@
+<input type="checkbox" id="nav-toggle" />
+<div class="sidebar">
+  <div class="sidebar-brand">
+    <h1><i class="fa fa-tag">Mutiu</i></h1>
+  </div>
+  <div class="sidebar-menu">
+    <ul>
+      <li>
+        <span class="active" [routerLink]="['/dashboard']">Home</span>
+      </li>
+      <li>
+        <span [routerLink]="['/dashboard/user']">User Manage</span>
+      </li>
+      <li>
+        <span [routerLink]="['/dashboard/permision']">Permission Manager</span>
+      </li>
+      <li>
+        <span [routerLink]="['/dashboard/transaction']">Transaction</span>
+      </li>
+      <li>
+        <span [routerLink]="['']">Account</span>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="main-content">
+  <header>
+    <h1>
+      <label for="nav-toggle">
+        <span class="fa fa-bars"> </span>
+      </label>
+      Dashboard
+    </h1>
+
+    <div class="search-wrapper">
+      <span class="fa fa-search"></span>
+      <input type="search" placeholder="Search here" />
+    </div>
+    <div class="user-wrapper">
+      <img [src]="imageUrl" width="30px" height="20px" alt="sdh" />
+      <div>
+        <h3>Mutiu Mike</h3>
+        <div>super Admin</div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+</div>
