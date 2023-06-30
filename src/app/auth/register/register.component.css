@@ -1,0 +1,233 @@
+.app {
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Circular Std" !important;
+  align-items: center;
+  margin: 0;
+}
+
+.left-side {
+  width: 55%;
+  /* border: 3px solid orange; */
+  background: linear-gradient(180deg, #7b77a4 0%, #dad9d4 100%);
+  height: 100vh;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.left-side-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  row-gap: 100px;
+  width: 90%;
+  margin: auto;
+}
+
+.right-side {
+  width: 45%;
+  /* border: 3px solid green; */
+  height: 100vh;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  background: #fff;
+}
+
+.login-area {
+  width: 90%;
+  /* border: 3px solid red; */
+  margin: auto;
+  margin-top: 50px;
+}
+
+.login-forms {
+  display: block;
+  justify-content: end;
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  margin-right: auto;
+  /* border: 3px solid blue; */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+input[type="tel"] {
+  border: 1px solid #c2c8dd;
+  padding: 10px;
+  color: #5a5c63;
+  /* width: 100%; */
+  background: #ffffff;
+  padding: 16px 24px;
+  gap: 16px;
+  border: 1px solid #c2c8dd;
+  border-radius: 4px;
+}
+
+.action-link {
+  color: #d9ac0a;
+}
+
+#login {
+  padding: 16px 24px;
+  width: 100%;
+  height: 56px;
+  background: #25214f;
+  border-radius: 10px;
+  border: none;
+  color: #fff;
+  margin-top: 15px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: larger;
+}
+
+.login-title {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 130%;
+  color: #25214f;
+}
+
+.terminal-content {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  /* row-gap: 10px; */
+}
+* .heading-2 {
+  font-weight: 900;
+  font-size: 60px;
+  line-height: 130%;
+  color: #25214f;
+  /* or 78px */
+}
+
+.heading-1 {
+  font-weight: 900;
+  font-size: 60px;
+  line-height: 130%;
+  color: #25214f;
+}
+/* } */
+
+.introduction {
+  color: #000000;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 70px;
+}
+
+.login-sub {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  /* width: 50%; */
+  color: #72788b;
+}
+
+.title-content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+}
+
+label {
+  color: #000000;
+  font-weight: 700 !important;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: flex-start; */
+  padding: 10px 0;
+  width: 100%;
+  position: relative;
+}
+
+.show {
+  position: absolute;
+  right: 10px;
+  top: 45px;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 25px;
+  text-align: center;
+}
+button:disabled {
+  opacity: 0.3;
+}
+
+/* X-Small devices (portrait phones, less than 576px) */
+/* No media query for `xs` since this is the default in Bootstrap */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+  .row {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    row-gap: 10px;
+  }
+
+  .left-side {
+    display: none;
+  }
+
+  .right-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 40px 0;
+    /* background: url("/assets/images/pattern.jpg") no-repeat center center / */
+    /* cover !important; */
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+  .row {
+    padding: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    row-gap: 10px;
+    margin-right: 20px;
+  }
+
+  .left-side {
+    display: none;
+  }
+
+  .right-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 40px 0;
+    /* background: url("/assets/images/pattern.jpg") no-repeat center center / */
+    /* cover !important; */
+  }
+
+  #account {
+    display: none;
+    justify-content: center;
+  }
+}

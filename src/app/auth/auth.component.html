@@ -1,0 +1,29 @@
+<div class="container">
+  <!-- <app-loader *ngIf="loading"></app-loader> -->
+
+  <div class="left-side">
+    <div class="left-side-div">
+      <img
+        [routerLink]="['/test']"
+        src="assets/Logo.svg"
+        style="margin-bottom: 5%; margin-top: 10px; width: 300px"
+        alt=""
+        style="cursor: pointer"
+      />
+      <div class="terminal-content">
+        <span class="heading-1">Welcome to</span>
+        <span class="heading-2">Royal Bank</span>
+        <span class="heading-2">Support</span>
+        <span class="introduction">
+          Banking on your hand with total freedom and restful mind
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="right-side">
+    <div style="padding: 16px 24px"></div>
+
+    <router-outlet></router-outlet>
+  </div>
+</div>
